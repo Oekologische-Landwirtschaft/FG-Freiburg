@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Ökologische Landwirtschaft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #2d4a2d;
+      --green-mid: #4a7c4a;
+      --green-light: #8fbc5a;
+      --cream: #f5f0e8;
+      --text: #1e2c1e;
+      --white: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Source Sans 3', sans-serif; background-color: var(--cream); color: var(--text); }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--green-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 64px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--green-light); font-size: 1.25rem;
+      font-weight: 700; letter-spacing: 0.02em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 0.5rem; list-style: none; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--cream); text-decoration: none;
+      font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.45rem 1rem; border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: var(--green-light); color: var(--green-dark);
+    }
+    .nav-links .nav-sep {
+      color: rgba(255,255,255,0.2);
+      display: flex; align-items: center;
+      font-size: 0.85rem; padding: 0 0.1rem;
+    }
+    .page-header {
+      background: var(--green-dark);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+    .page-header .eyebrow {
+      font-size: 0.78rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--green-light);
+      font-weight: 600; margin-bottom: 0.6rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; color: var(--white);
+    }
+    .breadcrumb {
+      max-width: 700px; margin: 2rem auto 0;
+      padding: 0 2rem; font-size: 0.82rem; color: #7a8a7a;
+    }
+    .breadcrumb a { color: var(--green-mid); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .content {
+      max-width: 700px; margin: 3rem auto 5rem; padding: 0 2rem;
+    }
+    .content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--green-dark);
+      margin: 2.5rem 0 0.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1.5px solid rgba(74,124,74,0.2);
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content p, .content address {
+      font-size: 1rem; line-height: 1.85;
+      color: #3a4a3a; font-weight: 300;
+      font-style: normal;
+    }
+    .content a { color: var(--green-mid); text-decoration: none; }
+    .content a:hover { text-decoration: underline; }
+    footer {
+      background: #1a2e1a; color: rgba(255,255,255,0.45);
+      text-align: center; padding: 2rem 1rem; font-size: 0.85rem;
+    }
+    footer a { color: var(--green-light); text-decoration: none; }
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links a { font-size: 0.75rem; padding: 0.4rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Öko-Landwirtschaft</a>
+    <ul class="nav-links">
+      <li><a href="pflanzen.html">Pflanzen</a></li>
+      <li><a href="tierhaltung.html">Tierhaltung</a></li>
+      <li><a href="maschinen.html">Maschinen</a></li>
+      <li><span class="nav-sep">|</span></li>
+      <li><a href="quellen.html">Quellen</a></li>
+      <li><a href="impressum.html" class="active">Impressum</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="eyebrow">Rechtliches</div>
+    <h1>Impressum</h1>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">Startseite</a> &rsaquo; Impressum
+  </div>
+
+  <div class="content">
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <address>
+      <!-- Euren Namen / Klasse eintragen -->
+      Vorname Nachname<br>
+      Klasse XX · [Name der Schule]<br>
+      [Straße und Hausnummer]<br>
+      [PLZ] [Ort]
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:euremail@beispiel.de">euremail@beispiel.de</a>
+    </p>
+
+    <h2>Verantwortlich für den Inhalt</h2>
+    <p>
+      Vorname Nachname, Schüler/in der Klasse XX<br>
+      [Name der Schule], [Ort]
+    </p>
+
+    <h2>Schulprojekt – Haftungshinweis</h2>
+    <p>
+      Diese Website wurde im Rahmen eines Schulprojekts im Fach Geografie erstellt. Die Inhalte dienen ausschließlich Bildungszwecken. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
+    </p>
+
+    <h2>Urheberrecht</h2>
+    <p>
+      Die auf dieser Website veröffentlichten Texte und Bilder wurden von uns selbst erstellt oder stammen aus frei lizenzierten Quellen (siehe <a href="quellen.html">Quellenverzeichnis</a>). Eine Vervielfältigung oder Verwendung der Inhalte ohne ausdrückliche Genehmigung ist nicht gestattet.
+    </p>
+  </div>
+
+  <footer>
+    <p>Schulprojekt Geografie &nbsp;|&nbsp; <a href="index.html">Ökologische Landwirtschaft</a> &nbsp;|&nbsp; 2025</p>
+  </footer>
+
+</body>
+</html>
