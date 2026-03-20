@@ -20,7 +20,6 @@
       background-color: var(--cream);
       color: var(--text);
     }
-
     /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
@@ -45,7 +44,6 @@
     .nav-links a:hover, .nav-links a.active {
       background: var(--green-light); color: var(--green-dark);
     }
-
     /* PAGE HERO */
     .page-hero {
       position: relative; height: 52vh; min-height: 320px;
@@ -83,7 +81,6 @@
       font-weight: 300; max-width: 560px;
       margin: 0.9rem auto 0; line-height: 1.7;
     }
-
     /* BREADCRUMB */
     .breadcrumb {
       max-width: 1000px; margin: 2rem auto 0;
@@ -91,7 +88,6 @@
     }
     .breadcrumb a { color: var(--green-mid); text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
-
     /* INTRO */
     .intro-block {
       max-width: 1000px; margin: 2.5rem auto 0;
@@ -102,7 +98,6 @@
       font-size: 1.1rem; line-height: 1.85;
       color: #3a4a3a; font-weight: 300;
     }
-
     /* CONTENT */
     .content-section {
       max-width: 1000px; margin: 5rem auto;
@@ -113,7 +108,6 @@
       text-transform: uppercase; color: var(--green-mid);
       font-weight: 700; margin-bottom: 0.4rem;
     }
-
     /* SPLIT LAYOUT */
     .split {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -121,7 +115,6 @@
     }
     .split.reverse { direction: rtl; }
     .split.reverse > * { direction: ltr; }
-
     .split-text h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem; color: var(--green-dark);
@@ -132,14 +125,14 @@
       color: #3a4a3a; font-weight: 300; margin-bottom: 1rem;
     }
     .split-text p:last-child { margin-bottom: 0; }
-
     .split-img {
       position: relative; border-radius: 4px;
       overflow: hidden;
       box-shadow: 0 8px 32px rgba(45,74,45,0.18);
+      height: 300px;
     }
     .split-img img {
-      width: 100%; height: 300px;
+      width: 100%; height: 100%;
       object-fit: cover; display: block;
     }
     .split-img-caption {
@@ -148,7 +141,6 @@
       color: rgba(255,255,255,0.85); font-size: 0.78rem;
       padding: 1.2rem 1rem 0.6rem; letter-spacing: 0.04em;
     }
-
     /* FULL WIDTH IMAGE */
     .full-img-block {
       max-width: 1000px; margin: 0 auto 5rem; padding: 0 2rem;
@@ -162,7 +154,6 @@
       margin-top: 0.6rem; font-size: 0.82rem;
       color: #7a8a7a; text-align: center;
     }
-
     /* STAT ROW */
     .stat-row {
       display: grid;
@@ -186,7 +177,6 @@
       font-size: 0.85rem; color: #5a6a5a;
       font-weight: 400; line-height: 1.5;
     }
-
     /* HIGHLIGHT BOX */
     .highlight-box {
       background: var(--green-dark); color: var(--white);
@@ -212,7 +202,6 @@
       font-size: 0.9rem; line-height: 1.7;
       color: rgba(255,255,255,0.75); font-weight: 300;
     }
-
     /* MEDIA PLACEHOLDER */
     .media-placeholder {
       background: rgba(74,124,74,0.08);
@@ -225,7 +214,6 @@
     }
     .media-placeholder:hover { border-color: var(--green-mid); }
     .media-placeholder span.icon { font-size: 2rem; }
-
     /* VIDEO */
     .video-wrapper {
       position: relative; padding-bottom: 56.25%;
@@ -236,14 +224,12 @@
       position: absolute; inset: 0;
       width: 100%; height: 100%; border: none;
     }
-
     /* FOOTER */
     footer {
       background: #1a2e1a; color: rgba(255,255,255,0.45);
       text-align: center; padding: 2rem 1rem; font-size: 0.85rem;
     }
     footer a { color: var(--green-light); text-decoration: none; }
-
     @media (max-width: 700px) {
       .split, .split.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2rem; }
       nav { padding: 0 1rem; }
@@ -255,19 +241,20 @@
 <body>
 
   <!-- NAVIGATION -->
-   <nav>
+  <nav>
     <a class="nav-logo" href="index.html">Öko-Landwirtschaft</a>
     <ul class="nav-links">
       <li><a href="pflanzen.html">Pflanzen</a></li>
       <li><a href="tierhaltung.html">Tierhaltung</a></li>
       <li><a href="maschinen.html">Maschinen</a></li>
-       <li><a href="quellen.html">Quellen</a></li>
-       <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="quellen.html">Quellen</a></li>
+      <li><a href="impressum.html">Impressum</a></li>
     </ul>
   </nav>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
+    <img class="page-hero-img" src="HERO_PFLANZEN.jpg" alt="Ökologische Landwirtschaft">
     <div class="page-hero-content">
       <div class="page-hero-eyebrow">Lösungsansätze · Thema 1</div>
       <h1>Pflanzen &amp; Aufforstung</h1>
@@ -307,8 +294,10 @@
     </div>
   </div>
 
-  <!-- SECTION 1: Ökologische landwirtschaft -->
+  <!-- CONTENT SECTIONS -->
   <div class="content-section">
+
+    <!-- SECTION 1: Ökologische Landwirtschaft -->
     <div class="split">
       <div class="split-text">
         <div class="section-label">Lösung 1</div>
@@ -317,24 +306,28 @@
         <p>Ökologische Landwirtschaft setzt auf vielfältige Fruchtfolge: Verschiedene Kulturen wechseln sich auf den selben Feldern ab. Das bricht Schädlingszyklen und regeneriert den Boden. Leguminosen wie Klee oder Erbsen binden Stickstoff und düngen auf natürliche Art den Boden.</p>
       </div>
       <div class="split-img">
-        <img src="staub.jpeg" alt="">
+        <img src="staub.jpeg" alt="Ökologische Landwirtschaft">
+        <div class="split-img-caption">Ökologischer Anbau schützt Boden und Artenvielfalt</div>
       </div>
     </div>
 
     <!-- SECTION 2: Agroforst -->
+    <!-- FIX: war <img> und <div> direkt im .split, jetzt korrekt in .split-img gewrappt -->
     <div class="split reverse">
       <div class="split-text">
         <div class="section-label">Lösung 2</div>
-        <h2>Agroforstwirtschaft, Landwirtschaft</h2>
+        <h2>Agroforstwirtschaft</h2>
         <p>Agroforstwirtschaft ist eine Landwirtschaftsform, die Landwirtschaft und Forstwirtschaft kombiniert. Die Bäume schützen vor Wind und Erosion, spenden Schatten, binden CO₂, fördern das Bodenleben durch ihre Wurzeln und lassen neue Lebensräume entstehen.</p>
         <p>Agroforstwirtschaft kann die Gesamtproduktivität einer Gesamtfläche steigern.</p>
       </div>
-     <img src="feld.jpeg" alt="Agroforstwirtschaft – Bäume und Felder">
-<div class="split-img-caption">Agroforstwirtschaft verbindet Landwirtschaft</div>
+      <div class="split-img">
+        <img src="feld.jpeg" alt="Agroforstwirtschaft – Bäume und Felder">
+        <div class="split-img-caption">Agroforstwirtschaft verbindet Landwirtschaft und Forstwirtschaft</div>
       </div>
     </div>
 
     <!-- SECTION 3: Dünger -->
+    <!-- FIX: war <img> und <div> direkt im .split, jetzt korrekt in .split-img gewrappt -->
     <div class="split">
       <div class="split-text">
         <div class="section-label">Lösung 3</div>
@@ -342,8 +335,9 @@
         <p>Probleme: Die Düngerproduktion ist ein wesentlicher Treiber des Klimawandels. Es erzeugt 1,3% - 2% der weltweiten CO₂-Emissionen. Besonders Stickstoffdünger führt im Boden zu hohen Emissionen, da es beim Umwandeln des Düngers zur Lachgasentstehung kommt.</p>
         <p>Eine klimafreundliche Lösung für Dünger ist der Einsatz von organischem Dünger, wie Kompost oder Mist. Diese entstehen aus natürlichen Reststoffen und verursachen weniger Treibhausgase als künstlicher Dünger.</p>
       </div>
-      <img src="häcksler.jpg" alt="Organischer Dünger – Kompost">
-<div class="split-img-caption">Organischer Dünger aus natürlichen Reststoffen</div>
+      <div class="split-img">
+        <img src="häcksler.jpg" alt="Organischer Dünger – Kompost">
+        <div class="split-img-caption">Organischer Dünger aus natürlichen Reststoffen</div>
       </div>
     </div>
 
@@ -354,23 +348,25 @@
         <h2>Rewilding</h2>
         <p>Durch die Abholzung von Wäldern wird viel gespeichertes CO₂ wieder freigesetzt, was den Klimawandel verstärkt. Außerdem gehen durch die Abholzung Lebensräume von Tieren und Pflanzen verloren und die Biodiversität nimmt ab.</p>
         <p>Ein wichtiger Lösungsansatz ist die Aufforstung, also das gezielte Pflanzen von Bäumen, damit neue Wälder entstehen. Diese Wälder nehmen CO₂ aus der Atmosphäre auf und speichern es langfristig. Ein Wald der Fläche der USA könnte 205 Milliarden Tonnen Kohlenstoffdioxid speichern, was circa 2/3 der 300 Milliarden Tonnen, die seit der industriellen Revolution ausgestoßen wurden, entspricht.</p>
-        <p>Rewilding ist außerdem ein vielversprechnder Lösungsansatz, der Ökosysteme wiederherstellt, sodass Pflanzen und Tiere sich entwickeln können und die Natur langfristig stabiler wird. Weitere Infos zu Rewilding: <a href="https://rewildingeurope.com/callforawildereurope/de//">Rewilding Europe</a></p>
+        <p>Rewilding ist außerdem ein vielversprechender Lösungsansatz, der Ökosysteme wiederherstellt, sodass Pflanzen und Tiere sich entwickeln können und die Natur langfristig stabiler wird. Weitere Infos zu Rewilding: <a href="https://rewildingeurope.com/callforawildereurope/de//">Rewilding Europe</a></p>
       </div>
       <div class="split-img">
         <img src="rewilding.jpeg" alt="Aufforstung eines Waldstückes">
         <div class="split-img-caption">Wissen über Bodengesundheit wird zunehmend weitergegeben</div>
       </div>
     </div>
-  </div>
+
+  </div><!-- Ende content-section -->
 
   <!-- FULL WIDTH IMAGE -->
   <div class="full-img-block">
     <figure>
-       <figcaption>Vielfältig bewirtschaftete Felder als Gegenentwurf zur Monokultur</figcaption>
+      <figcaption>Vielfältig bewirtschaftete Felder als Gegenentwurf zur Monokultur</figcaption>
     </figure>
   </div>
 
   <!-- HIGHLIGHT BOX -->
+  <!-- FIX: fehlendes schließendes </div> für highlight-box und content-section ergänzt -->
   <div class="content-section">
     <div class="highlight-box">
       <div class="section-label">Zusammenfassung</div>
@@ -394,8 +390,7 @@
         </div>
       </div>
     </div>
-
-   
+  </div><!-- Ende content-section -->
 
   <!-- FOOTER -->
   <footer>
